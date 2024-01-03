@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% block title %}<title>Добро пожаловать</title>{% endblock %}
+<body>
+    <div class="layout">
+
+        {% block content %}
+        <main class="main-content">
+            <div class="main-content-title">
+                <div>
+                    <h3>У нашего колледжа есть 4 корпуса!</h3>
+                </div>
+                <div>
+                    <p>3 из них находятся в городе Курск. 4 корпус - в городе Курчатов</p>
+                    <p>На данной странице мы вывели далеко не все группы нашего колледжа.<br /> Заранее отметим, что данные группы находятся на втором корпусе</p>
+                </div>
+                <div class="groups">
+                    {% for group in groups %}
+                        <div>
+                            <p>{{ group.name }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </main>
+        {% endblock %}
+    </div>
+</body>

@@ -1,0 +1,46 @@
+{% extends 'main.html' %}
+{% block title %}<title>Добро пожаловать</title>{% endblock %}
+<body>
+    <div class="layout">
+        {% block content %}
+
+        <main class="main-content">
+            <div class="layout">
+                <div class="content">
+                    <div>
+                        <h3>Ваша успеваемость {{ grade.num_of_student.surname }}</h3>
+                    </div>
+                    <div>
+                        <h4>Данная успеваемость представлена за первый симместр</h4>
+                    </div>
+
+                    <table>
+                        {% for grade in grades %}
+                        <tr>
+                            <td><div><p>{{ grade.num_of_student.surname }}</p></div></td>
+                            <td><div><p>{{ grade.subject.name }}</p></div></td>
+                            <td><div class="grds"><p>{{ grade.g1 }}</p></div></td>
+                            <td><div class="grds"><p>{{ grade.g2 }}</p></div></td>
+                            <td><div class="grds"><p>{{ grade.g3 }}</p></div></td>
+                            <td><div class="grds"><p>{{ grade.g4 }}</p></div></td>
+                            <td><div class="grds"><p>{{ grade.g5 }}</p></div></td>
+                            <td><div class="grds"><p>{{ grade.g6 }}</p></div></td>
+                            <td><div class="grds"><p>{{ grade.g7 }}</p></div></td>
+                            <td><div class="grds"><p>{{ grade.g8 }}</p></div></td>
+                            <td><div class="grds"><p>{{ grade.g9 }}</p></div></td>
+                            <td><div class="grds"><p>{{ grade.g10 }}</p></div></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+
+                    <div>
+                        <p>Все ваши данные находятся в надежном месте.<br /> Мы вам гарантируем их безопасность</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% endblock %}
+    </div>
+</body>
+
+</html>

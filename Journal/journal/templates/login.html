@@ -1,0 +1,61 @@
+{% extends 'main.html' %}
+{% block title %}<title>Добро пожаловать</title>{% endblock %}
+<body>
+    <div class="layout">
+        {% block header %}
+        <header class="layout-main">
+            <div class="navigation-header">
+                <div>
+                    <div class="header">
+                        <a href="#" class="logotype">
+                            <div class="logotype__title">ОБПОУ «Курский Гос. Политех. Колледж»</div>
+                            <div class="logotype__subtitle">Курская область</div>
+                        </a>
+                        <nav>
+                            <div class="menu">
+                                <a class="menu0-item" href="{% url 'faculties' %}">
+                                    <div class="menu0-item__title">Факультеты</div>
+                                </a>
+                                <a class="menu0-item" href="{% url 'about' %}">
+                                    <div class="menu0-item__title">О нашей организации</div>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% endblock %}
+
+        {% block content %}
+        <div>
+            <div class="forma">
+                <div>
+                    <h2>Добро пожаловать в <span>электронный журнал!</span></h2>
+                </div>
+                <form action="{% url 'page' %}", method="post">
+                    <div class="forma-t1">
+                        <p>Войдите в учётную запись</p>
+                    </div>
+                    <div class="labels">
+                        <input type="text" class="label-text" placeholder="Фамилия"/>
+                        <input type="text" class="label-text" placeholder="Имя"/>
+                        <input type="text" class="label-text" placeholder="ID"/>
+                    </div>
+                    <div class="base">
+                        <input type="submit" value="Войти" class="login__submit" data-test-id="login-button">
+                    </div>
+                    <div class="base">
+                        <p>Ещё не зарегистрированы?</p>
+                        <input type="submit" value="Зарегистрироваться" class="login__submit" data-test-id="register-button">
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+</body>
+</html>
+<!--
+    https://edu.kurskobr.ru/authorize?return_uri=%2Fjournal-user-preferences-action
+-->

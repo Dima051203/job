@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block description %}
+    <meta name="description" content="Электронный журнал для Курского Государственного Политехнического Колледжа" />
+    {% endblock %}
+    {% block keywords %}
+    <meta name="keywords" content="Журнал, Электронный журнал, Колледж, КГПК, Курский Государственный Политехнический Колледж" />
+    {% endblock %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {% block title %}<title>Электронный журнал</title>{% endblock %}
+</head>
+
+<body>
+    <div class="layout">
+        {% block header %}
+        <header>
+            <div class="navigation-header">
+                <div>
+                    <div class="header">
+                        <a href="{% url 'page' %}" class="logotype">
+                            <div class="logotype__title">ОБПОУ «Курский Гос. Политех. Колледж»</div>
+                            <div class="logotype__subtitle">Курская область</div>
+                        </a>
+                        <nav>
+                            <div class="menu">
+                                <a class="menu0-item" href="{% url 'faculties' %}">
+                                    <div class="menu0-item__title">Факультеты</div>
+                                </a>
+                                <a class="menu0-item" href="{% url 'grades' %}">
+                                    <div class="menu0-item__title">Оценки</div>
+                                </a>
+                                <a class="menu0-item" href="{% url 'groups' %}">
+                                    <div class="menu0-item__title">Группы</div>
+                                </a>
+                                <a class="menu0-item" href="{% url 'teachers' %}">
+                                    <div class="menu0-item__title">Преподаватели</div>
+                                </a>
+                                <a class="menu0-item" href="{% url 'personal_account' %}">
+                                    <div class="menu0-item__title">Профиль</div>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% endblock %}
+
+        {% block content %}
+        <main class="main-content">
+            <div>
+                <div></div>
+            </div>
+        </main>
+        {% endblock %}
+
+        {% block footer %}
+        <footer class="footer">
+            <div class="layout-content">
+                <div class="footer-copyright">
+                    <p>&copy; Курская область 2024</p>
+                </div>
+                <div class="footer-container">
+                    <ul class="footer-menu">
+                        <li class="footer-menu__item">
+                            <a href="https://kg-college.ru" class="b-href">Сайт организации</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="tel:84712510791" class="b-href">8(4712)51-07-91</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="{% url 'technical' %}" class="b-href">Служба поддержки</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="footer-technics">
+                    <li>Техническая поддержка</li>
+                </ul>
+            </div>
+        </footer>
+        {% endblock %}
+    </div>
+</body>
+
+</html>

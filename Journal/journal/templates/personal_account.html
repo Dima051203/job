@@ -1,0 +1,56 @@
+{% extends 'main.html' %}
+{% block title %}<title>Добро пожаловать</title>{% endblock %}
+<body>
+    <div class="layout">
+        {% block content %}
+
+        <main class="main-content">
+            <div class="layout">
+                <div class="content">
+                    <div>
+                        <h3>Профиль студента</h3>
+                    </div>
+                    <div>
+                        <h4>Мои Данные</h4>
+                    </div>
+                    <div>
+                        <h5>Персональные данные</h5>
+                    </div>
+                    <div class="labels">
+                        <div class="label-per-acc">
+                            <p>Фамилия</p>
+                            <input type="text" class="label-text" placeholder="{{ student.surname }}" disabled/>
+                            <!--<input type="text" class="label-text" placeholder="Фамилия" disabled=""/>-->
+                        </div>
+                        <div class="label-per-acc">
+                            <p>Имя</p>
+                            <input type="text" class="label-text" placeholder="{{ student.name }}" disabled/>
+                            <!--<input type="text" class="label-text" placeholder="Имя" disabled=""/>-->
+                        </div>
+                        <div class="label-per-acc">
+                            <p>ID</p>
+                            <input type="text" class="label-text" placeholder="{{ student.number_id }}" disabled/>
+                            <!--<input type="text" class="label-text" placeholder="Отчество" disabled=""/>-->
+                        </div>
+                        <div class="label-per-acc">
+                            <p>Группа</p>
+                            <input type="text" class="label-text" placeholder="{{ student.group }}" disabled/>
+                            <!--<input type="text" class="label-text" placeholder="Группа" disabled=""/>-->
+                        </div>
+                        <div class="label-per-acc">
+                            <p>Телефон</p>
+                            <input type="text" class="label-text" placeholder="{{ student.group }}" disabled/>
+                            <!--<input type="text" class="label-text" placeholder="Группа" disabled=""/>-->
+                        </div>
+                    </div>
+                    <div>
+                        <p>Все ваши данные находятся в надежном месте.<br /> Мы вам гарантируем их безопасность</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% endblock %}
+    </div>
+</body>
+
+</html>

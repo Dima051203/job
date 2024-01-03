@@ -1,0 +1,62 @@
+{% extends 'main.html' %}
+{% block title %}<title>Добро пожаловать</title>{% endblock %}
+<body>
+    <div class="layout">
+        {% block content %}
+        <main class="main-content">
+            <div class="layout">
+                <div class="content">
+                    <div class="content-title">
+                        <h3>Преподаватели КГПК</h3>
+                    </div>
+                    <div>
+                        <p>В нашем колледже работают одни из самых лучших преподавателей</p>
+                    </div>
+
+                    <div>
+                        <p>Ниже перечислены фамилии преподавателей 2 корпуса КГПК</p>
+                    </div>
+
+                    <div class="progs">
+
+                        <table>
+                            {% for teacher in teachers %}
+                            <tr>
+                                <td>{{ teacher.surname }}</td>
+                                <td>{{ teacher.name }}</td>
+                                <td>{{ teacher.thirdname }}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% endblock %}
+        {% block footer %}
+        <footer class="footer">
+            <div class="layout-content">
+                <div class="footer-copyright">
+                    <p>&copy; Курская область 2024</p>
+                </div>
+                <div class="footer-container">
+                    <ul class="footer-menu">
+                        <li class="footer-menu__item">
+                            <a href="https://kg-college.ru" class="b-href">Сайт организации</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="tel:84712510791" class="b-href">8(4712)51-07-91</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="{% url 'technical' %}" class="b-href">Служба поддержки</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="footer-technics">
+                    <li>Техническая поддержка</li>
+                </ul>
+            </div>
+        </footer>
+        {% endblock %}
+    </div>
+</body>

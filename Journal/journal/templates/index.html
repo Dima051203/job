@@ -1,0 +1,79 @@
+{% extends 'main.html' %}
+{% block title %}<title>Добро пожаловать</title>{% endblock %}
+
+<body>
+    <div class="layout">
+        {% block header %}
+        <header class="layout-main">
+            <div class="navigation-header">
+                <div>
+                    <div class="header">
+                        <a href="#" class="logotype">
+                            <div class="logotype__title">ОБПОУ «Курский Гос. Политех. Колледж»</div>
+                            <div class="logotype__subtitle">Курская область</div>
+                        </a>
+                        <nav>
+                            <div class="menu">
+                                <a class="menu0-item" href="{% url 'faculties' %}">
+                                    <div class="menu0-item__title">Факультеты</div>
+                                </a>
+                                <a class="menu0-item" href="{% url 'about' %}">
+                                    <div class="menu0-item__title">О нашей организации</div>
+                                </a>
+                                <a class="menu0-item" href="{% url 'login' %}">
+                                    <div class="menu0-item__title">Войти</div>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% endblock %}
+
+        {% block content %}
+        <main class="main-content">
+            <div class="main-layout">
+                <div class="main-title-text">
+                    <h2>Электронный журнал — цифровая образовательная платформа, которая делает образование в России качественным и доступным!</h2>
+                </div>
+                <div class="main-content-layout">
+                    <div class="main-content-layout-text">
+                        <div>
+                            <h2>НАШУ ПЛАТФОРМУ ИСПОЛЬЗУЮТ И ДРУГИЕ УЧЕБНЫЕ ЗАВЕДЕНИЯ!</h2>
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        {% endblock %}
+
+        <footer class="footer">
+            <div class="layout-content">
+                <div class="footer-copyright">
+                    <p>&copy; Курская область 2024</p>
+                </div>
+                <div class="footer-container">
+                    <ul class="footer-menu">
+                        <li class="footer-menu__item">
+                            <a href="https://kg-college.ru" class="b-href">Сайт организации</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="tel:84712510791" class="b-href">8(4712)51-07-91</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a href="https://kg-college.ru" class="b-href">Служба поддержки</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="footer-technics">
+                    <li>Техническая поддержка</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>

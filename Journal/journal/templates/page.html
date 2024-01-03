@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+{% block title %}<title>Электронный журнал</title>{% endblock %}
+{% block header %}
+        <header>
+            <div class="navigation-header">
+                <div>
+                    <div class="header">
+                        <a href="#" class="logotype">
+                            <div class="logotype__title">ОБПОУ «Курский Гос. Политех. Колледж»</div>
+                            <div class="logotype__subtitle">Курская область</div>
+                        </a>
+                        <nav>
+                            <div class="menu">
+                                <a class="menu0-item" href="{% url 'faculties' %}">
+                                    <div class="menu0-item__title">Факультеты</div>
+                                </a>
+                                <a class="menu0-item" href="{% url 'grades' %}">
+                                    <div class="menu0-item__title">Оценки</div>
+                                </a>
+                                <a class="menu0-item" href="{% url 'groups' %}">
+                                    <div class="menu0-item__title">Группы</div>
+                                </a>
+                                <a class="menu0-item" href="{% url 'teachers' %}">
+                                    <div class="menu0-item__title">Преподаватели</div>
+                                </a>
+                                <a class="menu0-item" href="{% url 'personal_account' %}">
+                                    <div class="menu0-item__title">Профиль</div>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% endblock %}
